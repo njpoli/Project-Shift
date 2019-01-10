@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<body>
+<script>
+	//Problem 5
+	const array = ['a', 'b', 'c', 'd', 'c', 'b', 'b', 'c', 'a', 'e', 'b', 'e'];
+	
+	function most(arr) {
+		var mostMap = {};
+		var mostFreq = arr[0], maxCount = 1;
+		for (var i = 0; i < arr.length; i++) {
+			var element = arr[i];
+			if (mostMap[element] == null) {
+				mostMap[element] = 1;
+				}
+			else
+				mostMap[element]++;
+			if (mostMap[element] > maxCount) {
+				maxElement = element;
+				maxCount = mostMap[element];
+			}
+		}		
+		return maxElement;
+	}
+	
+	function least(arr) {
+		var minElement = [...array.reduce((r, n) =>
+		r.set(n, (r.get(n) || 0) + 1), new Map()
+		)]
+		.reduce((r, v) => v[1] < r[1] ? v : r)[0];
+		return minElement;
+  }
+	alert(most(array));
+	alert(least(array));
+</script>
+</body>
+</html>

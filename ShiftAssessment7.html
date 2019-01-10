@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<body>
+<script>
+	//Problem 7
+	var cost = 1837;
+	var array1 = [100, 20, 5, 1];
+	var array2 = [];
+	for (var i = 0; i < array1.length; ++i) {
+		var remainder = array1[i] % cost;
+		var counter = 0;
+			while (cost >= remainder) {
+				cost = cost - array1[i];
+				counter++;
+			}
+		array2[i] = counter;
+	}
+	
+	for (var i = 0; i < array1.length; i++) {
+		alert (array1[i] + " : " + array2[i]);
+	}
+</script>
+</body>
+</html>

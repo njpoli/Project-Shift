@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<body>
+<script>
+	//Problem 6
+	var array1 = ['a', 'b', 'c', 'a', 'a', 'b', 'd'];
+	var array2 = ['a', 'b', 'b', 'a', 'e', 'c', 'c', 'g'];
+	var array3 = [];
+	var arrayCounter = 0;
+	array1.sort();
+	array2.sort();
+	for (var i = 0, j = 0; i < array1.length && j < array2.length; i++, j++) {
+		if (array1[i] == array2[j]) {
+			array3[arrayCounter] = array1[i];
+			++arrayCounter;
+		}
+	}
+	alert (array3);
+</script>
+</body>
+</html>
