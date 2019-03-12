@@ -3,13 +3,13 @@
 <body>
 <script>
 	//Problem 7
-	var cost = 1837;
-	var array1 = [100, 20, 5, 1];
+	var cost = 1752;
+	var array1 = [100, 20, 10, 5, 1];
 	var array2 = [];
 	for (var i = 0; i < array1.length; ++i) {
-		var remainder = array1[i] % cost;
+		var remainder = cost % array1[i];
 		var counter = 0;
-			while (cost >= remainder) {
+			while (cost > remainder) {
 				cost = cost - array1[i];
 				counter++;
 			}
